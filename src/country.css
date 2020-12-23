@@ -51,6 +51,7 @@
   .country article .country-inner {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
   }
 
   .country .country-details {
