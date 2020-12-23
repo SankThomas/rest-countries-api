@@ -30,7 +30,7 @@ yarn-error.log*
 
 # Avoid accidental XD or Figma upload if you convert the design file
 #######################################################
-## Please do not remove lines 11 and 12 - thanks! 🙂 ##
+## Please do not remove lines 35 and 36 - thanks! 🙂 ##
 #######################################################
 *.xd
 *.fig

@@ -1,0 +1,5 @@
+1. Dark theme toggle
+2. Search input and select
+3. Country component
+  // Grab url from API
+4. Style country component

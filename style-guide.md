@@ -23,7 +23,7 @@ The designs were created to the following widths:
 ### Body Copy
 
 - Homepage Items: 14px
-- Detail Page: 16px
+- Detail Page: 16px 
 
 ### Fonts
 

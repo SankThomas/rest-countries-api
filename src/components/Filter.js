@@ -1,6 +1,24 @@
 import React from 'react'
 
 const Filter = () => {
+  window.addEventListener('DOMContentLoaded', () => {
+    const search = document.getElementById('search')
+
+    search.addEventListener('click', (e) => {
+      const { value } = e.target
+
+      const countryName = document.querySelectorAll('.country-name')
+
+      countryName.forEach((name) => {
+        if (name.innerText.toLowerCase().includes(value.toLowerCase())) {
+          name.parentElement.parentElement.style.display = 'block'
+        } else {
+          name.parentElement.parentElement.style.display = 'none'
+        }
+      })
+    })
+  })
+
   return (
     <>
       <form className="form" id="form">
