@@ -1,0 +1,16 @@
+{
+  "name": "Rest Countries API Application",
+  "short_name": "Search Countries App",
+  "icons": [
+    {
+      "src": "img/logo.png",
+      "sizes": "92x92",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#202c37",
+  "theme_color": "#202c37"
+}
