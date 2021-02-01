@@ -13,7 +13,6 @@ const Country = () => {
       )
       const country = await response.json()
       setCountry(country)
-      console.log(country)
     }
 
     fetchCountryData()
