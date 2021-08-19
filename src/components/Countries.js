@@ -30,7 +30,7 @@ const Countries = () => {
   return (
     <>
 
-    <Filter searchInput={searchInput} setSearchInput={setSearchInput} setFiltered={setFiltered} countries={countries} />
+    <Filter searchInput={searchInput} setSearchInput={setSearchInput} setFiltered={setFiltered} setCountries={setCountries} countries={countries} />
       {searchInput.length > 1 ? <section className="countries">
         {filtered.map((country) => {
           const {
