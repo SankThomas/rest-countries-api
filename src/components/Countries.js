@@ -52,7 +52,7 @@ const Countries = () => {
                   Name: <span>{name}</span>
                 </h4>
                 <h4>
-                  Population: <span>{population}</span>
+                  Population: <span>{population.toLocaleString()}</span>
                 </h4>
                 <h4>
                   Region: <span>{region}</span>
@@ -97,7 +97,7 @@ const Countries = () => {
                 Name: <span>{name}</span>
               </h4>
               <h4>
-                Population: <span>{population}</span>
+                Population: <span>{population.toLocaleString()}</span>
               </h4>
               <h4>
                 Region: <span>{region}</span>
