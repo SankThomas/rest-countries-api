@@ -2,23 +2,18 @@ import React from 'react'
 
 const Header = () => {
   const changeTheme = () => {
-    const btnMoon = document.querySelector('.btn-moon')
-    const header = document.querySelector('.header')
+    const header = document.querySelector(".header")
     const details = document.querySelectorAll('.details')
-    const uls = document.querySelectorAll('ul')
-
-    btnMoon.addEventListener('click', () => {
-      document.body.classList.toggle('light-theme')
-      header.classList.toggle('light-theme')
-
-      details.forEach((detail) => {
-        detail.classList.toggle('light-theme')
-      })
-
-      uls.forEach((ul) => {
-        ul.classList.toggle('light-theme')
-      })
+    const uls = document.querySelectorAll("ul")
+    
+    details.forEach((detail) => {
+      detail.classList.toggle("light-theme")
     })
+    header.classList.toggle("light-theme")
+    uls.forEach((ul) => {
+      ul.classList.toggle("light-theme")
+    })
+    document.body.classList.toggle("light-theme")
   }
 
   return (
