@@ -1,40 +1,71 @@
-import React from 'react'
+import React, { useEffect } from "react"
 
-const Filter = ({searchInput, setSearchInput, setFiltered, countries}) => {
-  // window.addEventListener('DOMContentLoaded', () => {
-  //   const search = document.getElementById('search')
+const Filter = ({
+  searchInput,
+  setSearchInput,
+  setFiltered,
+  setCountries,
+  countries,
+}) => {
+  const regions = [
+    {
+      name: "Filter by region",
+      desc: "All",
+    },
+    {
+      name: "Africa",
+      desc: "Africa",
+    },
+    {
+      name: "Americas",
+      desc: "Americas",
+    },
+    {
+      name: "Asia",
+      desc: "Asia",
+    },
+    {
+      name: "Europe",
+      desc: "Europe",
+    },
+    {
+      name: "Oceania",
+      desc: "Oceania",
+    },
+  ]
 
-  //   search.addEventListener('click', (e) => {
-  //     const { value } = e.target
-
-  //     const countryName = document.querySelectorAll('.country-name')
-
-  //     countryName.forEach((name) => {
-  //       if (name.innerText.toLowerCase().includes(value.toLowerCase())) {
-  //         name.parentElement.parentElement.style.display = 'block'
-  //       } else {
-  //         name.parentElement.parentElement.style.display = 'none'
-  //       }
-  //     })
-  //   })
-  // })
-
+  // Prevent page reload when submitting the form
   const handleSubmit = (e) => {
     e.preventDefault()
   }
 
+  // Search countries
   const searchCountries = (searchValue) => {
     setSearchInput(searchValue)
 
     if (searchInput) {
-      const filteredCountries = countries.filter((country) => (
-        Object.values(country).join("").toLowerCase().includes(searchValue.toLowerCase())
-      ))
+      const filteredCountries = countries.filter((country) =>
+        Object.values(country)
+          .join("")
+          .toLowerCase()
+          .includes(searchValue.toLowerCase())
+      )
       setFiltered(filteredCountries)
     } else {
       setFiltered(countries)
     }
   }
+
+  // Filter by region
+
+  const filterRegions = (region) => {
+    setCountries(countries.filter((country) => country.region === region))
+  }
+
+  useEffect(() => {
+    filterRegions()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
 
   return (
     <>
@@ -49,12 +80,17 @@ const Filter = ({searchInput, setSearchInput, setFiltered, countries}) => {
         />
 
         <div className="select">
-          <select name="select" id="select">
-            <option value="Filter by region">Filter by region</option>
+          <select
+            name="select"
+            id="select"
+            onChange={(e) => filterRegions(e.target.value)}
+            value={regions.name}
+          >
+            <option value="All">All</option>
             <option value="Africa">Africa</option>
-            <option value="Americas">Americas</option>
             <option value="Asia">Asia</option>
             <option value="Europe">Europe</option>
+            <option value="Americas">Americas</option>
             <option value="Oceania">Oceania</option>
           </select>
         </div>
