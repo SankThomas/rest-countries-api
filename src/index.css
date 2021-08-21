@@ -23,6 +23,10 @@ ul {
   list-style-type: none;
 }
 
+a {
+  text-decoration: none;
+}
+
 .buttons {
   display: flex;
   align-items: center;
