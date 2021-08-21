@@ -46,36 +46,35 @@ const Countries = () => {
               country
 
             return (
-              <article key={numericCode}>
-                <div className="flag">
-                  <img src={flag} alt={name} />
-                </div>
-                <div className="details">
-                  <h4 className="country-name">
-                    Name: <span>{name}</span>
-                  </h4>
-                  <h4>
-                    Population: <span>{population.toLocaleString()}</span>
-                  </h4>
-                  <h4>
-                    Region: <span>{region}</span>
-                  </h4>
-                  <h4>
-                    Capital: <span>{capital}</span>
-                  </h4>
-                  <div className="buttons">
-                    <Link to={`/countries/${name}`} className="btn">
-                      Learn More
-                    </Link>
-                    <button
-                      className="btn"
-                      onClick={() => removeCountry(numericCode)}
-                    >
-                      Remove Country
-                    </button>
+              <Link to={`/countries/${name}`} key={numericCode}>
+                <article>
+                  <div className="flag">
+                    <img src={flag} alt={name} />
                   </div>
-                </div>
-              </article>
+                  <div className="details">
+                    <h4 className="country-name">
+                      Name: <span>{name}</span>
+                    </h4>
+                    <h4>
+                      Population: <span>{population.toLocaleString()}</span>
+                    </h4>
+                    <h4>
+                      Region: <span>{region}</span>
+                    </h4>
+                    <h4>
+                      Capital: <span>{capital}</span>
+                    </h4>
+                    <div className="buttons">
+                      <button
+                        className="btn"
+                        onClick={() => removeCountry(numericCode)}
+                      >
+                        Remove Country
+                      </button>
+                    </div>
+                  </div>
+                </article>
+              </Link>
             )
           })}
         </section>
@@ -86,36 +85,35 @@ const Countries = () => {
               country
 
             return (
-              <article key={numericCode}>
-                <div className="flag">
-                  <img src={flag} alt={name} />
-                </div>
-                <div className="details">
-                  <h4 className="country-name">
-                    Name: <span>{name}</span>
-                  </h4>
-                  <h4>
-                    Population: <span>{population.toLocaleString()}</span>
-                  </h4>
-                  <h4>
-                    Region: <span>{region}</span>
-                  </h4>
-                  <h4>
-                    Capital: <span>{capital}</span>
-                  </h4>
-                  <div className="buttons">
-                    <Link to={`/countries/${name}`} className="btn">
-                      Learn More
-                    </Link>
-                    <button
-                      className="btn"
-                      onClick={() => removeCountry(numericCode)}
-                    >
-                      Remove Country
-                    </button>
+              <Link to={`/countries/${name}`} key={numericCode}>
+                <article>
+                  <div className="flag">
+                    <img src={flag} alt={name} />
                   </div>
-                </div>
-              </article>
+                  <div className="details">
+                    <h4 className="country-name">
+                      Name: <span>{name}</span>
+                    </h4>
+                    <h4>
+                      Population: <span>{population.toLocaleString()}</span>
+                    </h4>
+                    <h4>
+                      Region: <span>{region}</span>
+                    </h4>
+                    <h4>
+                      Capital: <span>{capital}</span>
+                    </h4>
+                    <div className="buttons">
+                      <button
+                        className="btn"
+                        onClick={() => removeCountry(numericCode)}
+                      >
+                        Remove Country
+                      </button>
+                    </div>
+                  </div>
+                </article>
+              </Link>
             )
           })}
         </section>
