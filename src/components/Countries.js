@@ -15,6 +15,7 @@ const Countries = () => {
       const response = await fetch(url)
       const countries = await response.json()
       setCountries(countries)
+      setIsLoading(false)
     }
 
     fetchCountries()
@@ -36,7 +37,9 @@ const Countries = () => {
         setCountries={setCountries}
         countries={countries}
       />
-      {searchInput.length > 1 ? (
+      {isLoading ? (
+        <h1 className="loading">Loading...</h1>
+      ) : searchInput.length > 1 ? (
         <section className="countries">
           {filtered.map((country) => {
             const { numericCode, name, flag, population, region, capital } =
