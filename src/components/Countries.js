@@ -21,12 +21,12 @@ const Countries = () => {
     fetchCountries()
   }, [])
 
-  const removeCountry = (numericCode) => {
-    const newCountry = countries.filter(
-      (country) => country.numericCode !== numericCode
-    )
-    setCountries(newCountry)
-  }
+  // const removeCountry = (numericCode) => {
+  //   const newCountry = countries.filter(
+  //     (country) => country.numericCode !== numericCode
+  //   )
+  //   setCountries(newCountry)
+  // }
 
   return (
     <>
