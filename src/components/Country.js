@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react'
-import { Link, useParams } from 'react-router-dom'
-import '../country.css'
+import React, { useState, useEffect } from "react"
+import { Link, useParams } from "react-router-dom"
+import "../country.css"
 
 const Country = () => {
   const [country, setCountry] = useState([])
@@ -54,7 +54,7 @@ const Country = () => {
                       Native Name: <span>{nativeName}</span>
                     </h5>
                     <h5>
-                      Population: <span>{population}</span>
+                      Population: <span>{population.toLocaleString()}</span>
                     </h5>
                     <h5>
                       Region: <span>{region}</span>
@@ -63,7 +63,7 @@ const Country = () => {
                       Sub Region: <span>{subregion}</span>
                     </h5>
                     <h5>
-                      Capital: <span>{capital}</span>{' '}
+                      Capital: <span>{capital}</span>{" "}
                     </h5>
                   </div>
 
