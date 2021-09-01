@@ -64,14 +64,6 @@ const Countries = () => {
                     <h4>
                       Capital: <span>{capital}</span>
                     </h4>
-                    <div className="buttons">
-                      <button
-                        className="btn"
-                        onClick={() => removeCountry(numericCode)}
-                      >
-                        Remove Country
-                      </button>
-                    </div>
                   </div>
                 </article>
               </Link>
@@ -103,14 +95,6 @@ const Countries = () => {
                     <h4>
                       Capital: <span>{capital}</span>
                     </h4>
-                    <div className="buttons">
-                      <button
-                        className="btn"
-                        onClick={() => removeCountry(numericCode)}
-                      >
-                        Remove Country
-                      </button>
-                    </div>
                   </div>
                 </article>
               </Link>
