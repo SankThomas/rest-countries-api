@@ -58,13 +58,16 @@ const Filter = ({
 
   // Filter by region
 
-  const filterRegions = (region) => {
-    setCountries(countries.filter((country) => country.region === region))
+  const filterRegions = async (region) => {
+    const url = `https://restcountries.eu/rest/v2/region/${region}`
+    const res = await fetch(url)
+    const data = await res.json()
+    setCountries(data)
   }
 
   useEffect(() => {
     filterRegions()
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line
   }, [])
 
   return (
@@ -86,7 +89,6 @@ const Filter = ({
             onChange={(e) => filterRegions(e.target.value)}
             value={regions.name}
           >
-            <option value="All">All</option>
             <option value="Africa">Africa</option>
             <option value="Asia">Asia</option>
             <option value="Europe">Europe</option>
