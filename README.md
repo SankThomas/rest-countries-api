@@ -1,6 +1,6 @@
 # Important Update!
 
-Restcountries.eu is now called countrylayer API. They've updated their terms of use and introduced a subscription based service - with a free tier of course, limited to 100 requests per day.
+Restcountries.eu is now called countrylayer API. They've updated their terms of use and introduced a subscription based service - with a free tier of course, limited to 100 requests per day. You need an access key in order to query data from the API.
 
 Therefore, the code in this repository won't work (as far as I've tested). Check [this](https://github.com/SankThomas/country-layer-api-demo) repository for the demo on the new API. I will be releasing a YouTube video soon as the one I made for the previous API has been rendered obsolete. Thank you.
 
